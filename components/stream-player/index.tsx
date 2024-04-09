@@ -13,6 +13,7 @@ import { ChatToggle } from "./chat-toggle";
 import { Chat, ChatSkeleton } from "./chat";
 import { Video, VideoSkeleton } from "./video";
 import { Header, HeaderSkeleton } from "./header";
+import TipTapEditor from "../note-component/TipTapEditor";
 
 type CustomStream = {
   id: string;
@@ -96,6 +97,9 @@ export const StreamPlayer = ({
             bio={user.bio}
             followedByCount={user._count.followedBy}
           />
+          <div className="border-stone-200 shadow-xl border rounded-lg px-16 py-8 w-full">
+          <TipTapEditor />
+        </div>
         </div>
         <div
           className={cn(
